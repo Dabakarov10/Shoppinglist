@@ -1,0 +1,440 @@
+@startuml
+class com.dabakarov10.shoppinglist.databinding.HomePageItemBinding {
+- RelativeLayout rootView
++ TextView countUsers
++ TextView dateTxt
++ TextView eventName
++ ImageView imageView
++ RelativeLayout getRoot()
++ {static} HomePageItemBinding inflate(LayoutInflater)
++ {static} HomePageItemBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} HomePageItemBinding bind(View)
+}
+class com.dabakarov10.shoppinglist.DataModel {
++ String name
+~ boolean checked
++ String getName()
++ void setName(String)
++ boolean isChecked()
++ void setChecked(boolean)
++ String toString()
+}
+class com.dabakarov10.shoppinglist.databinding.ActivityHomePageBinding {
+- LinearLayout rootView
++ Button btnAddEventToList
++ Button btnCreateEvent
++ TextView caption
++ ListView eventsList
++ ImageView imgToAlarmPage
++ TextView text1
++ EditText txtAddEvent
++ LinearLayout getRoot()
++ {static} ActivityHomePageBinding inflate(LayoutInflater)
++ {static} ActivityHomePageBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityHomePageBinding bind(View)
+}
+class com.dabakarov10.shoppinglist.Exists_item_Page {
+- TextView txt_eventName
+- String EventName
+- ArrayList<DataModel> dataModels
+- CustomAdapter adapter
+- ListView listView
+- Bundle extras
+- DatabaseReference myRefList
+- ImageView img_CopyToClipboard
+# void onCreate(Bundle)
++ void init()
++ void getDataModelsList()
++ void makeAList(ArrayList<DataModel>)
++ void onItemClick(AdapterView<?>,View,int,long)
++ void onClick(View)
+}
+class com.dabakarov10.shoppinglist.BuildConfig {
++ {static} boolean DEBUG
++ {static} String APPLICATION_ID
++ {static} String BUILD_TYPE
++ {static} int VERSION_CODE
++ {static} String VERSION_NAME
+}
+class com.dabakarov10.shoppinglist.MainActivity {
+~ ProgressBar splashProgress
+~ int SPLASH_TIME
+# void onCreate(Bundle)
+- void playProgress()
+}
+class com.dabakarov10.shoppinglist.ExampleUnitTest {
++ void addition_isCorrect()
+}
+class com.dabakarov10.shoppinglist.ExampleInstrumentedTest {
++ void useAppContext()
+}
+class com.dabakarov10.shoppinglist.Utilities {
++ String getAlphaNumericString()
++ int[] randomArr(int,int)
+}
+class com.dabakarov10.shoppinglist.Dynamic_item_Page {
+- TextView txt_eventName
+- ListView listView
+- ArrayList<String> list
+- Adapter adapter
+- EditText userInput
+- Button button_SendItem
+- FirebaseDatabase database
+- DatabaseReference myRefList
+- ArrayList<DataModel> dataModels
+- String EventName
+- ImageView img_CopyToClipboard
+# void onCreate(Bundle)
++ void init()
++ void getDataModelsList()
++ void onClick(View)
++ void onItemClick(AdapterView<?>,View,int,long)
+}
+class com.dabakarov10.shoppinglist.Validators {
++ boolean check_number_presence(String)
++ String check_password(String)
++ String check_username(String)
++ String check_Email(String)
++ String check_phone(String)
++ String check_Date(String)
++ String cheek_EmptyString(String)
++ String check_allValidators(String,String,String,String)
++ String check_allValidators(String,String)
++ void sode1()
++ String check_allValidators(String,String,String)
+}
+class com.dabakarov10.shoppinglist.AlarmReceiver {
++ void onReceive(Context,Intent)
+}
+class com.dabakarov10.shoppinglist.Alarm_Notification_Page {
+- MaterialTimePicker picker
+- Calendar calendar
+- AlarmManager alarmManager
+- PendingIntent pendingIntent
+- TextView selectedTime
+- Button selectTimeBtn
+# void onCreate(Bundle)
+- void cancelAlarm()
+- void setAlarm()
+- void showTimePicker()
+- void createNotificationChannel()
++ void onClick(View)
+}
+class com.dabakarov10.shoppinglist.EventCustomAdapter {
+- ArrayList<Event> dataSet
+~ Context mContext
++ int getCount()
++ Event getItem(int)
++ View getView(int,View,ViewGroup)
+}
+class com.dabakarov10.shoppinglist.EventCustomAdapter.ViewHolder {
+~ TextView eventName
+~ TextView countUsers
+~ TextView date_txt
+}
+class com.dabakarov10.shoppinglist.databinding.ActivityAlarmNotificationPageBinding {
+- LinearLayout rootView
++ Button cancelAlarmBtn
++ Button selectTimeBtn
++ TextView selectedTime
++ Button setAlarmBtn
++ LinearLayout getRoot()
++ {static} ActivityAlarmNotificationPageBinding inflate(LayoutInflater)
++ {static} ActivityAlarmNotificationPageBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityAlarmNotificationPageBinding bind(View)
+}
+class com.dabakarov10.shoppinglist.databinding.ActivityExistsItemPageBinding {
+- LinearLayout rootView
++ TextView eventCode
++ TextView eventCountUsers
++ TextView eventDate
++ TextView eventDescription
++ TextView eventName
++ ImageView imgCopyToClipboard
++ ListView listView
++ LinearLayout getRoot()
++ {static} ActivityExistsItemPageBinding inflate(LayoutInflater)
++ {static} ActivityExistsItemPageBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityExistsItemPageBinding bind(View)
+}
+class com.dabakarov10.shoppinglist.Event {
++ String eventName
++ String eventCountUsers
++ String eventDate
++ String eventCode
++ String eventDescription
++ String event_type
++ ArrayList<DataModel> itemsListDM
++ String getEventName()
++ void setEventName(String)
++ String getEventCountUsers()
++ void setEventCountUsers(String)
++ ArrayList<DataModel> getItemsListDM()
++ void setItemsListDM(ArrayList<DataModel>)
++ String getEventDescription()
++ void setEventDescription(String)
++ String getEventDate()
++ String getEvent_type()
++ void setEvent_type(String)
++ void setEventDate(String)
++ String getEventCode()
++ void setEventCode(String)
++ String toStringItamList()
++ String toString()
+}
+class com.dabakarov10.shoppinglist.databinding.RowItemBinding {
+- RelativeLayout rootView
++ CheckBox checkBox
++ TextView txtName
++ RelativeLayout getRoot()
++ {static} RowItemBinding inflate(LayoutInflater)
++ {static} RowItemBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} RowItemBinding bind(View)
+}
+class com.dabakarov10.shoppinglist.User {
++ {static} String name
++ {static} String email
++ {static} String password
++ {static} String phone
++ {static} String user_UID
++ {static} ArrayList<String> userEvents
++ String getName()
++ void setName(String)
++ String getEmail()
++ void setEmail(String)
++ String getPassword()
++ void setPassword(String)
++ String getPhone()
++ void setPhone(String)
++ String getUser_UID()
++ void setUser_UID(String)
++ ArrayList<String> getUserEvents()
++ void setUserEvents(ArrayList<String>)
+}
+class com.dabakarov10.shoppinglist.databinding.ActivityCreateEventPageBinding {
+- LinearLayout rootView
++ TextView alertTextBox
++ Button btnSend
++ Button buttonSendItem
++ TextView caption
++ ListView listViewItems
++ Switch switch1
++ EditText txtEventDate
++ EditText txtEventDescription
++ EditText txtEventName
++ EditText userInputItems
++ LinearLayout getRoot()
++ {static} ActivityCreateEventPageBinding inflate(LayoutInflater)
++ {static} ActivityCreateEventPageBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityCreateEventPageBinding bind(View)
+}
+class com.dabakarov10.shoppinglist.HomePage {
+- Button btn_createEvent
+- ArrayList<Event> events
+- ArrayList<String> EventsCode
+- TextView txtV_caption
+- EventCustomAdapter adapter
+- ListView listView
+- EditText txt_addEvent
++ User user
+- String userUID
+- boolean flag
+- Event event
+- FirebaseDatabase database
+- DatabaseReference myRefList
+- TextView battery
+- ImageView img_to_AlarmPage
+- int countUsers
+- BroadcastReceiver broadcastReceiver
+# void onCreate(Bundle)
++ void init()
++ void onClick(View)
++ void addCountUsers()
++ void SubtractCountUsers(String)
++ void setEventsListCodeView()
++ void getEventsListCodes()
++ void addUserEventsList()
++ void eventIsRealyExists()
++ boolean onKeyDown(int,KeyEvent)
+# void exitByBackKey()
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
++ void delEventFromfirebase(String)
++ void setUserInfo()
++ void onItemClick(AdapterView<?>,View,int,long)
++ boolean onItemLongClick(AdapterView<?>,View,int,long)
+}
+class com.dabakarov10.shoppinglist.UserProfilePage {
+- TextView user_Username
+- User user
+- String userUID
+# void onCreate(Bundle)
++ void init()
++ void setUserInfo()
+}
+class com.dabakarov10.shoppinglist.databinding.ActivityLogInPageBinding {
+- LinearLayout rootView
++ EditText InputTextLogInEmail
++ EditText InputTextLogInPassword
++ TextView alertTextBox
++ Button buttonSighIn
++ Button buttonSighUp
++ TextView caption
++ LinearLayout getRoot()
++ {static} ActivityLogInPageBinding inflate(LayoutInflater)
++ {static} ActivityLogInPageBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityLogInPageBinding bind(View)
+}
+class com.dabakarov10.shoppinglist.databinding.ActivityDynamicItemPageBinding {
+- LinearLayout rootView
++ Button buttonSendItem
++ TextView eventCode
++ TextView eventCountUsers
++ TextView eventDate
++ TextView eventDescription
++ TextView eventName
++ ImageView imgCopyToClipboard
++ ListView listView
++ EditText userInput
++ EditText userInputCount
++ LinearLayout getRoot()
++ {static} ActivityDynamicItemPageBinding inflate(LayoutInflater)
++ {static} ActivityDynamicItemPageBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityDynamicItemPageBinding bind(View)
+}
+class com.dabakarov10.shoppinglist.databinding.ActivityUserProfilePageBinding {
+- LinearLayout rootView
++ TextView TextSighUpEmail
++ TextView TextSighUpPassword
++ TextView TextSighUpPhone
++ TextView TextSighUpUsername
++ TextView caption
++ LinearLayout getRoot()
++ {static} ActivityUserProfilePageBinding inflate(LayoutInflater)
++ {static} ActivityUserProfilePageBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityUserProfilePageBinding bind(View)
+}
+class com.dabakarov10.shoppinglist.Create_Event_Page {
+- ListView listView_items
+- DatePickerDialog picker
+- TextView alert
+- EditText txt_EventDate
+- Button btn_send
+- int day
+- Switch aSwitch
+- Event event
+- Adapter adapter
+- ArrayList<String> list
+- ArrayList<DataModel> dataModels
+- FirebaseDatabase database
+- DatabaseReference myRefList
+- String eventCode
+# void onCreate(Bundle)
++ void init()
++ void onClick(View)
++ void onItemClick(AdapterView<?>,View,int,long)
++ void addUserEventsList()
++ boolean onKeyDown(int,KeyEvent)
++ boolean onTouch(View,MotionEvent)
+}
+class com.dabakarov10.shoppinglist.LogInPage {
+- Button button_SighUp
+- TextView alertTextBox
+- EditText InputTextLogIn_email
+- FirebaseAuth mAuth
+# void onCreate(Bundle)
++ void onStart()
+- void updateUI(FirebaseUser)
++ void onClick(View)
+}
+class com.dabakarov10.shoppinglist.SighUpPage {
+- TextView caption
+- Button button_send
+- EditText InputTextSighUp_Username
+- FirebaseAuth mAuth
+- DatabaseReference mDatabase
+# void onCreate(Bundle)
+- void init()
++ void onClick(View)
+- void updateUI(FirebaseUser)
+}
+class com.dabakarov10.shoppinglist.databinding.ActivitySighUpPageBinding {
+- LinearLayout rootView
++ EditText InputTextSighUpEmail
++ EditText InputTextSighUpPassword
++ EditText InputTextSighUpPhone
++ EditText InputTextSighUpUsername
++ TextView alertTextBox
++ Button buttonSend
++ TextView caption
++ LinearLayout getRoot()
++ {static} ActivitySighUpPageBinding inflate(LayoutInflater)
++ {static} ActivitySighUpPageBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivitySighUpPageBinding bind(View)
+}
+class com.dabakarov10.shoppinglist.databinding.ActivityMainBinding {
+- LinearLayout rootView
++ TextView caption
++ TextView copyright
++ ProgressBar splashProgress
++ LinearLayout getRoot()
++ {static} ActivityMainBinding inflate(LayoutInflater)
++ {static} ActivityMainBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityMainBinding bind(View)
+}
+class com.dabakarov10.shoppinglist.CustomAdapter {
+- ArrayList<DataModel> dataSet
+~ Context mContext
++ int getCount()
++ DataModel getItem(int)
++ View getView(int,View,ViewGroup)
++ ArrayList<DataModel> getDataSet()
++ void setDataSet(ArrayList<DataModel>)
++ Context getmContext()
++ void setmContext(Context)
+}
+class com.dabakarov10.shoppinglist.CustomAdapter.ViewHolder {
+~ TextView txtName
+~ CheckBox checkBox
+}
+
+
+androidx.viewbinding.ViewBinding <|.. com.dabakarov10.shoppinglist.databinding.HomePageItemBinding
+androidx.viewbinding.ViewBinding <|.. com.dabakarov10.shoppinglist.databinding.ActivityHomePageBinding
+com.dabakarov10.shoppinglist.OnItemClickListener <|.. com.dabakarov10.shoppinglist.Exists_item_Page
+com.dabakarov10.shoppinglist.OnClickListener <|.. com.dabakarov10.shoppinglist.Exists_item_Page
+androidx.appcompat.app.AppCompatActivity <|-- com.dabakarov10.shoppinglist.Exists_item_Page
+androidx.appcompat.app.AppCompatActivity <|-- com.dabakarov10.shoppinglist.MainActivity
+com.dabakarov10.shoppinglist.OnClickListener <|.. com.dabakarov10.shoppinglist.Dynamic_item_Page
+com.dabakarov10.shoppinglist.OnItemClickListener <|.. com.dabakarov10.shoppinglist.Dynamic_item_Page
+androidx.appcompat.app.AppCompatActivity <|-- com.dabakarov10.shoppinglist.Dynamic_item_Page
+android.content.BroadcastReceiver <|-- com.dabakarov10.shoppinglist.AlarmReceiver
+com.dabakarov10.shoppinglist.OnClickListener <|.. com.dabakarov10.shoppinglist.Alarm_Notification_Page
+androidx.appcompat.app.AppCompatActivity <|-- com.dabakarov10.shoppinglist.Alarm_Notification_Page
+android.widget.ArrayAdapter <|-- com.dabakarov10.shoppinglist.EventCustomAdapter
+com.dabakarov10.shoppinglist.EventCustomAdapter +.. com.dabakarov10.shoppinglist.EventCustomAdapter.ViewHolder
+androidx.viewbinding.ViewBinding <|.. com.dabakarov10.shoppinglist.databinding.ActivityAlarmNotificationPageBinding
+androidx.viewbinding.ViewBinding <|.. com.dabakarov10.shoppinglist.databinding.ActivityExistsItemPageBinding
+androidx.viewbinding.ViewBinding <|.. com.dabakarov10.shoppinglist.databinding.RowItemBinding
+androidx.viewbinding.ViewBinding <|.. com.dabakarov10.shoppinglist.databinding.ActivityCreateEventPageBinding
+com.dabakarov10.shoppinglist.OnClickListener <|.. com.dabakarov10.shoppinglist.HomePage
+com.dabakarov10.shoppinglist.OnItemClickListener <|.. com.dabakarov10.shoppinglist.HomePage
+com.dabakarov10.shoppinglist.OnItemLongClickListener <|.. com.dabakarov10.shoppinglist.HomePage
+androidx.appcompat.app.AppCompatActivity <|-- com.dabakarov10.shoppinglist.HomePage
+androidx.appcompat.app.AppCompatActivity <|-- com.dabakarov10.shoppinglist.UserProfilePage
+androidx.viewbinding.ViewBinding <|.. com.dabakarov10.shoppinglist.databinding.ActivityLogInPageBinding
+androidx.viewbinding.ViewBinding <|.. com.dabakarov10.shoppinglist.databinding.ActivityDynamicItemPageBinding
+androidx.viewbinding.ViewBinding <|.. com.dabakarov10.shoppinglist.databinding.ActivityUserProfilePageBinding
+com.dabakarov10.shoppinglist.OnClickListener <|.. com.dabakarov10.shoppinglist.Create_Event_Page
+com.dabakarov10.shoppinglist.OnItemClickListener <|.. com.dabakarov10.shoppinglist.Create_Event_Page
+com.dabakarov10.shoppinglist.OnTouchListener <|.. com.dabakarov10.shoppinglist.Create_Event_Page
+androidx.appcompat.app.AppCompatActivity <|-- com.dabakarov10.shoppinglist.Create_Event_Page
+com.dabakarov10.shoppinglist.OnClickListener <|.. com.dabakarov10.shoppinglist.LogInPage
+androidx.appcompat.app.AppCompatActivity <|-- com.dabakarov10.shoppinglist.LogInPage
+com.dabakarov10.shoppinglist.OnClickListener <|.. com.dabakarov10.shoppinglist.SighUpPage
+androidx.appcompat.app.AppCompatActivity <|-- com.dabakarov10.shoppinglist.SighUpPage
+androidx.viewbinding.ViewBinding <|.. com.dabakarov10.shoppinglist.databinding.ActivitySighUpPageBinding
+androidx.viewbinding.ViewBinding <|.. com.dabakarov10.shoppinglist.databinding.ActivityMainBinding
+android.widget.ArrayAdapter <|-- com.dabakarov10.shoppinglist.CustomAdapter
+com.dabakarov10.shoppinglist.CustomAdapter +.. com.dabakarov10.shoppinglist.CustomAdapter.ViewHolder
+@enduml

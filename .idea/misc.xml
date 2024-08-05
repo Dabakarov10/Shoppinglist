@@ -1,0 +1,38 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/User/Desktop/Shoppinglist/app/src/main/res/layout/activity_event_display.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/User/Desktop/Shoppinglist/app/src/main/res/layout/activity_home_page.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/User/Desktop/Shoppinglist/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/User/Desktop/Shoppinglist/app/src/main/res/layout/activity_my_list_show.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/User/Desktop/Shoppinglist/app/src/main/res/layout/activity_user_list.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/User/Desktop/Shoppinglist/app/src/main/res/layout/activity_user_profile_page.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/User/Desktop/Shoppinglist/app/src/main/res/layout/home_page_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/User/Desktop/Shoppinglist/app/src/main/res/layout/row_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/activity_alarm_notification_page.xml" value="0.3175925925925926" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/activity_create_event_page.xml" value="0.29814814814814816" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/activity_destination.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/activity_dynamic_item_page.xml" value="0.2962962962962963" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/activity_event_display.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/activity_exists_item_page.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/activity_home_page.xml" value="0.2838541666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/activity_log_in_page.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/activity_my_list_show.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/activity_sigh_up_page.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/activity_user_list.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/activity_user_profile_page.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/home_page_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/layout/row_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Shoppinglist/app/src/main/res/menu/mymenu1.xml" value="0.18703703703703703" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="corretto-11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
